@@ -114,7 +114,6 @@ function renderProducts() {
           <h3 class="product-name">${safeText(p.name)}</h3>
           <p class="product-description">${safeText(p.description)}</p>
           <div class="product-bottom">
-            <span class="product-price">${safeText(p.price || "")}</span>
             ${shopButton}
           </div>
         </div>
