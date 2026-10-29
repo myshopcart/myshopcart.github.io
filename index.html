@@ -1,17 +1,23 @@
-```html
+
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Discover useful finds, everyday essentials, and products worth checking out at My Shop Cart.">
+
+  <meta
+    name="description"
+    content="Discover useful finds, everyday essentials, and products worth checking out at My Shop Cart."
+  >
   <meta name="theme-color" content="#25334a">
+
   <title>My Shop Cart | Everyday Finds</title>
+
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <!-- Announcement bar -->
+  <!-- Announcement Bar -->
   <div class="announcement">
     <span aria-hidden="true">✦</span>
     GOOD FINDS. EVERYDAY VALUE.
@@ -22,6 +28,7 @@
   <header class="site-header">
     <a class="brand" href="#" aria-label="My Shop Cart home">
       <span class="brand-mark">M.</span>
+
       <span class="brand-name">
         <strong>MY SHOP CART</strong>
         <small>Shop Smart. Live Better.</small>
@@ -36,7 +43,7 @@
   </header>
 
   <main>
-    <!-- Hero banner -->
+    <!-- Hero Banner -->
     <section class="hero">
       <div class="hero-copy">
         <p class="eyebrow">EVERYDAY FINDS</p>
@@ -52,7 +59,8 @@
         </p>
 
         <a class="button button-dark" href="#shop">
-          Explore Finds <span aria-hidden="true">→</span>
+          Explore Finds
+          <span aria-hidden="true">→</span>
         </a>
 
         <p class="hero-note">
@@ -61,18 +69,25 @@
         </p>
       </div>
 
-      <div class="hero-art" role="img" aria-label="Stylized shopping bag illustration in soft blue and navy">
+      <div
+        class="hero-art"
+        role="img"
+        aria-label="Stylized shopping bag illustration in soft blue and navy"
+      >
         <div class="hero-art-orbit"></div>
         <div class="hero-art-circle"></div>
-        <div class="hero-art-sparkle sparkle-one">✦</div>
-        <div class="hero-art-sparkle sparkle-two">✧</div>
+
+        <div class="hero-art-sparkle sparkle-one" aria-hidden="true">✦</div>
+        <div class="hero-art-sparkle sparkle-two" aria-hidden="true">✧</div>
 
         <div class="shopping-bag">
           <div class="bag-handle"></div>
+
           <div class="bag-front">
             <span>M.</span>
             <small>GOOD FINDS</small>
           </div>
+
           <div class="bag-tissue tissue-one"></div>
           <div class="bag-tissue tissue-two"></div>
         </div>
@@ -84,7 +99,7 @@
       </div>
     </section>
 
-    <!-- Benefits strip -->
+    <!-- Benefits Strip -->
     <section class="benefits" aria-label="What to expect">
       <div class="benefit">
         <span class="benefit-icon" aria-hidden="true">♡</span>
@@ -119,14 +134,16 @@
       </div>
     </section>
 
-    <!-- Category cards -->
+    <!-- Category Cards -->
     <section class="category-section" id="categories-section">
       <div class="section-heading">
         <div>
           <h2>Shop by Category</h2>
         </div>
+
         <a class="text-link" href="#shop">
-          Explore all <span aria-hidden="true">→</span>
+          Explore all
+          <span aria-hidden="true">→</span>
         </a>
       </div>
 
@@ -161,7 +178,7 @@
       </div>
     </section>
 
-    <!-- Product collection -->
+    <!-- Product Collection -->
     <section class="shop-section" id="shop">
       <div class="section-heading">
         <div>
@@ -170,8 +187,10 @@
         </div>
 
         <div class="shop-heading-tools">
+          <!-- Sorting Dropdown -->
           <label class="sort-wrap" for="sortSelect">
             <span class="sr-only">Sort products</span>
+
             <select id="sortSelect" name="sort">
               <option value="default">Default Order</option>
               <option value="az">Name: A to Z</option>
@@ -179,14 +198,20 @@
             </select>
           </label>
 
-          <span class="item-count" id="itemCount">0 items</span>
+          <!-- Product Count -->
+          <span class="item-count" id="itemCount" aria-live="polite">
+            0 items
+          </span>
         </div>
       </div>
 
+      <!-- Search and Category Filters -->
       <div class="shop-tools">
         <label class="search-wrap">
           <span class="search-icon" aria-hidden="true">⌕</span>
+
           <span class="sr-only">Search products</span>
+
           <input
             id="searchInput"
             type="search"
@@ -195,37 +220,101 @@
           >
         </label>
 
-        <div class="categories" id="categories" aria-label="Filter by category">
-          <button class="category active" data-category="All" type="button">All Finds</button>
-          <button class="category" data-category="Skincare" type="button">Skincare</button>
-          <button class="category" data-category="Makeup" type="button">Makeup</button>
-          <button class="category" data-category="Fashion" type="button">Fashion</button>
-          <button class="category" data-category="Home & Living" type="button">Home &amp; Living</button>
-          <button class="category favorites-filter" data-category="Favorites" type="button">♥ Favorites</button>
+        <div
+          class="categories"
+          id="categories"
+          aria-label="Filter by category"
+        >
+          <button
+            class="category active"
+            data-category="All"
+            type="button"
+            aria-pressed="true"
+          >
+            All Finds
+          </button>
+
+          <button
+            class="category"
+            data-category="Skincare"
+            type="button"
+            aria-pressed="false"
+          >
+            Skincare
+          </button>
+
+          <button
+            class="category"
+            data-category="Makeup"
+            type="button"
+            aria-pressed="false"
+          >
+            Makeup
+          </button>
+
+          <button
+            class="category"
+            data-category="Fashion"
+            type="button"
+            aria-pressed="false"
+          >
+            Fashion
+          </button>
+
+          <button
+            class="category"
+            data-category="Home & Living"
+            type="button"
+            aria-pressed="false"
+          >
+            Home &amp; Living
+          </button>
+
+          <button
+            class="category favorites-filter"
+            data-category="Favorites"
+            type="button"
+            aria-pressed="false"
+          >
+            ♥ Favorites
+          </button>
         </div>
       </div>
 
-      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      <!-- Products are rendered by script.js -->
+      <div
+        class="product-grid"
+        id="productGrid"
+        aria-live="polite"
+      ></div>
 
+      <!-- Empty Search Results -->
       <div class="empty-state" id="emptyState" hidden>
         No products match your search. Try another keyword or category.
       </div>
     </section>
 
-    <!-- About section -->
+    <!-- About Section -->
     <section class="about-section" id="about">
       <div class="about-decoration" aria-hidden="true">M.</div>
 
       <div class="about-copy">
         <p class="eyebrow">ABOUT US</p>
-        <h2>Good finds.<br><em>All in one place.</em></h2>
+
+        <h2>
+          Good finds.<br>
+          <em>All in one place.</em>
+        </h2>
 
         <p>
-          My Shop Cart brings together useful finds across beauty, fashion, and home essentials. Browse the collection and explore products for everyday living.
+          My Shop Cart brings together useful finds across beauty,
+          fashion, and home essentials. Browse the collection and
+          explore products for everyday living.
         </p>
 
         <a class="text-link" href="#shop">
-          Browse products <span aria-hidden="true">→</span>
+          Browse products
+          <span aria-hidden="true">→</span>
         </a>
       </div>
     </section>
@@ -235,6 +324,7 @@
   <footer>
     <a class="brand footer-brand" href="#" aria-label="Back to My Shop Cart home">
       <span class="brand-mark">M.</span>
+
       <span class="brand-name">
         <strong>MY SHOP CART</strong>
         <small>Shop Smart. Live Better.</small>
@@ -242,14 +332,16 @@
     </a>
 
     <span class="footer-note">
-      Everyday finds, all in one place. © <span id="year"></span>
+      Everyday finds, all in one place. ©
+      <span id="year"></span>
     </span>
 
     <a class="back-to-top" href="#">Back to top ↑</a>
   </footer>
 
+  <!-- JavaScript Files -->
+  <!-- Load product data before the script that uses it. -->
   <script src="products.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
-```
