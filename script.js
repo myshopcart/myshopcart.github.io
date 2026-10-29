@@ -20,14 +20,18 @@ function renderProducts() {
     const image = p.image
       ? `<img src="${safeText(p.image)}" alt="${safeText(p.name)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><div class="placeholder-shape" style="display:none">F.</div>`
       : `<div class="placeholder-shape">${String(index + 1).padStart(2, "0")}</div>`;
-    const url = /^https?:\/\//i.test(p.url || "") ? p.url : "https://shopee.ph/";
+    const url = /^https?:\/\//i.test(p.url || "") ? p.url : "";
+const platform = p.platform || "Shopee";
+const shopButton = url
+  ? `<a class="shop-link" href="${safeText(url)}" target="_blank" rel="noopener noreferrer sponsored">Shop on ${safeText(platform)} ↗</a>`
+  : "";
     return `<article class="product-card">
       <div class="product-image">${image}<span class="product-tag">${safeText(p.tag || p.category)}</span></div>
       <div class="product-info"><p class="product-category">${safeText(p.category)}</p>
       <h3 class="product-name">${safeText(p.name)}</h3>
       <p class="product-description">${safeText(p.description)}</p>
       <div class="product-bottom"><span class="product-price">${safeText(p.price || "")}</span>
-      <a class="shop-link" href="${safeText(url)}" target="_blank" rel="noopener noreferrer sponsored">Shop on Shopee ↗</a></div></div>
+     ${shopButton}</div></div>
     </article>`;
   }).join("");
 }
