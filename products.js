@@ -7,7 +7,7 @@ Use a direct image URL or local image path in "image".
 Leave image as "" to show a placeholder graphic.
 */
 const products = [
-  { name: "Maybelline Instant Eraser", category: "Beauty", description: "12HR Multi-use 2-in-1 Concealer, Corrector & Treatment, Full Coverage, Erase All", price: "₱258.40", image: "", url: "https://vt.tiktok.com/ZS9yysyB4BcTb-toi3I/", platform: "Tiktok Shop, tag: "Beauty pick" },
+  { name: "Maybelline Instant Eraser", category: "Beauty", description: "12HR Multi-use 2-in-1 Concealer, Corrector & Treatment, Full Coverage, Erase All", price: "₱258.40", image: "", url: "https://vt.tiktok.com/ZS9yysyB4BcTb-toi3I/", platform: "TikTok Shop", tag: "Beauty pick" },
   { name: "Minimal Everyday Bag", category: "Fashion", description: "A versatile piece to pair with everyday outfits.", price: "Add price", image: "", url: "https://shopee.ph/", tag: "Style find" },
   { name: "Desk & Study Organizer", category: "Lifestyle", description: "Keep your workspace tidy and easy to use.", price: "Add price", image: "", url: "https://shopee.ph/", tag: "Useful find" },
   { name: "Compact Tech Accessory", category: "Tech", description: "A practical extra for your daily setup.", price: "Add price", image: "", url: "https://shopee.ph/", tag: "Tech find" },
