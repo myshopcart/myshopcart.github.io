@@ -1575,4 +1575,71 @@ footer {
   .product-image img {
     padding: 6px;
   }
+/* =========================
+   MINIMAL, GENDER-NEUTRAL FINISH
+========================= */
+
+/* Keep the existing navy, white, and blue palette */
+:root {
+  --navy: #25334a;
+  --navy-dark: #19263b;
+  --background: #f8f9fc;
+}
+
+/* Use consistent, subtle borders */
+.product-card,
+.category-tile {
+  border-color: #e4e9f2;
+}
+
+/* Keep product cards clean and simple */
+.product-card {
+  box-shadow: 0 2px 8px rgba(37, 51, 74, 0.03);
+}
+
+.product-card:hover {
+  box-shadow: 0 8px 20px rgba(37, 51, 74, 0.07);
+}
+
+/* Neutral favorite button */
+.favorite-button:hover {
+  color: var(--navy);
+  background: #f1f5fb;
+}
+
+.favorite-button.is-favorite {
+  color: var(--navy);
+  background: #eaf0fa;
+  border-color: #cbd7eb;
+}
+
+/* Match the Favorites filter to the site's blue palette */
+.favorites-filter {
+  color: var(--navy);
+}
+
+.favorites-filter.active {
+  color: #ffffff;
+}
+
+/* Clear keyboard focus without changing the layout */
+.favorite-button:focus-visible {
+  outline: 2px solid #718bb7;
+  outline-offset: 3px;
+}
+
+/* Prevent oversized text from disrupting small product cards */
+.product-description {
+  overflow-wrap: anywhere;
+}
+
+/* Slightly soften the category card appearance */
+.category-tile {
+  box-shadow: none;
+}
+
+.category-tile:hover {
+  box-shadow: 0 8px 20px rgba(37, 51, 74, 0.06);
+}
+
 }
