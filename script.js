@@ -1,4 +1,3 @@
-javascript
 const grid = document.getElementById("productGrid");
 const searchInput = document.getElementById("searchInput");
 const emptyState = document.getElementById("emptyState");
