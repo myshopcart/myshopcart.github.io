@@ -1,12 +1,14 @@
-
+```javascript
 const grid = document.getElementById("productGrid");
 const searchInput = document.getElementById("searchInput");
 const emptyState = document.getElementById("emptyState");
 const itemCount = document.getElementById("itemCount");
 const categoryButtons = document.getElementById("categories");
+const sortSelect = document.getElementById("sortSelect");
 
 let activeCategory = "All";
 let showFavoritesOnly = false;
+let activeSort = "default";
 
 const FAVORITES_KEY = "myShopCartFavorites";
 
@@ -36,11 +38,12 @@ function renderProducts() {
   const term = searchInput.value.trim().toLowerCase();
   const favorites = getFavorites();
 
+  // Filter products by category, search term, and favorites.
   const visible = products.filter(p => {
     const matchesCategory =
-  activeCategory === "All" ||
-  activeCategory === "Favorites" ||
-  p.category === activeCategory;
+      activeCategory === "All" ||
+      activeCategory === "Favorites" ||
+      p.category === activeCategory;
 
     const matchesSearch = [
       p.name,
@@ -54,6 +57,25 @@ function renderProducts() {
 
     return matchesCategory && matchesSearch && matchesFavorites;
   });
+
+  // Sort the filtered products alphabetically when selected.
+  if (activeSort === "az") {
+    visible.sort((a, b) =>
+      String(a.name ?? "").localeCompare(
+        String(b.name ?? ""),
+        undefined,
+        { sensitivity: "base", numeric: true }
+      )
+    );
+  } else if (activeSort === "za") {
+    visible.sort((a, b) =>
+      String(b.name ?? "").localeCompare(
+        String(a.name ?? ""),
+        undefined,
+        { sensitivity: "base", numeric: true }
+      )
+    );
+  }
 
   itemCount.textContent =
     `${visible.length} ${visible.length === 1 ? "item" : "items"}`;
@@ -119,6 +141,14 @@ function renderProducts() {
         </div>
       </article>`;
   }).join("");
+}
+
+// Sort products using the dropdown in index.html.
+if (sortSelect) {
+  sortSelect.addEventListener("change", () => {
+    activeSort = sortSelect.value;
+    renderProducts();
+  });
 }
 
 // Existing product category filters, plus Favorites.
@@ -189,6 +219,7 @@ if (categoryShowcase) {
     });
 
     renderProducts();
+
     document.getElementById("shop").scrollIntoView({
       behavior: "smooth",
       block: "start"
@@ -196,8 +227,12 @@ if (categoryShowcase) {
   });
 }
 
+// Update the product display as the customer searches.
 searchInput.addEventListener("input", renderProducts);
 
+// Display the current year in the footer.
 document.getElementById("year").textContent = new Date().getFullYear();
 
+// Initial product display.
 renderProducts();
+```
