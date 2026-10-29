@@ -96,16 +96,16 @@ function renderProducts() {
       : `<div class="placeholder-shape">${String(index + 1).padStart(2, "0")}</div>`;
 
     const url = /^https?:\/\//i.test(p.url || "") ? p.url : "";
-    const platform = p.platform || "Shopee";
+   
+const shopButton = url
+  ? `<a class="shop-link"
+        href="${safeText(url)}"
+        target="_blank"
+        rel="noopener noreferrer sponsored">
+        Get It Here ↗
+     </a>`
+  : "";
 
-    const shopButton = url
-      ? `<a class="shop-link"
-            href="${safeText(url)}"
-            target="_blank"
-            rel="noopener noreferrer sponsored">
-            Shop on ${safeText(platform)} ↗
-         </a>`
-      : "";
 
     const productImage = url
       ? `<a class="product-image-link"
