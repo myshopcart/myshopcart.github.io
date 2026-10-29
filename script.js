@@ -1,4 +1,4 @@
-```javascript
+javascript
 const grid = document.getElementById("productGrid");
 const searchInput = document.getElementById("searchInput");
 const emptyState = document.getElementById("emptyState");
@@ -234,4 +234,3 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 // Initial product display.
 renderProducts();
-```
