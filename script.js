@@ -38,7 +38,9 @@ function renderProducts() {
 
   const visible = products.filter(p => {
     const matchesCategory =
-      activeCategory === "All" || p.category === activeCategory;
+  activeCategory === "All" ||
+  activeCategory === "Favorites" ||
+  p.category === activeCategory;
 
     const matchesSearch = [
       p.name,
