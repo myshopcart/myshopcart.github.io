@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Discover useful finds, everyday essentials, and products worth checking out.">
+  <title>THE FIND EDIT | Curated Finds</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">GOOD FINDS. NO EXTRA NOISE.</div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="The Find Edit home"><span class="brand-mark">F.</span><span>THE FIND EDIT</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#shop">Shop finds</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">YOUR PERSONAL FINDS LIST</p>
+        <h1>Good things.<br><em>Found for you.</em></h1>
+        <p class="hero-description">A curated corner for everyday essentials, little upgrades, and products worth a closer look.</p>
+        <a class="button button-dark" href="#shop">Explore the finds <span aria-hidden="true">↗</span></a>
+        <p class="disclosure-top">Some links may be affiliate links. I may earn a commission at no extra cost to you.</p>
+      </div>
+      <div class="hero-art" aria-label="Minimal editorial graphic">
+        <div class="art-circle"></div><div class="art-square"></div>
+        <div class="art-label">THE<br>GOOD<br>FIND.</div>
+        <span class="art-number">VOL. 01 / DAILY EDIT</span>
+      </div>
+    </section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE COLLECTION</p><h2>Browse the finds</h2></div>
+        <span class="item-count" id="itemCount">0 items</span>
+      </div>
+
+      <div class="shop-tools">
+        <label class="search-wrap"><span class="sr-only">Search products</span><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Search products..." autocomplete="off"></label>
+        <div class="categories" id="categories" aria-label="Filter by category">
+          <button class="category active" data-category="All">All finds</button>
+          <button class="category" data-category="Beauty">Beauty</button>
+          <button class="category" data-category="Fashion">Fashion</button>
+          <button class="category" data-category="Lifestyle">Lifestyle</button>
+          <button class="category" data-category="Tech">Tech</button>
+        </div>
+      </div>
+
+      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      <div class="empty-state" id="emptyState" hidden>No products match your search. Try another keyword or category.</div>
+      <p class="edit-note"><strong>Starter demo:</strong> The cards below are sample placeholders. Replace them with real products and your own Shopee affiliate links before publishing.</p>
+    </section>
+
+    <section class="about-section" id="about">
+      <div><p class="eyebrow">A LITTLE NOTE</p><h2>Thoughtfully found.<br>Easy to browse.</h2></div>
+      <div class="about-copy">
+        <p>The Find Edit brings together products I find interesting, useful, or worth sharing. Browse by category, search for something specific, and follow the shop link to check the listing.</p>
+        <p class="disclosure"><strong>Affiliate disclosure:</strong> Some links on this website may be affiliate links. If you buy through them, I may receive a commission at no additional cost to you. Product prices and availability can change, so please check the seller's listing before purchasing.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">F.</span><span>THE FIND EDIT</span></a><span>Curated with care. © <span id="year"></span></span><a href="#shop">Back to top ↑</a></footer>
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
