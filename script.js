@@ -26,7 +26,9 @@ const shopButton = url
   ? `<a class="shop-link" href="${safeText(url)}" target="_blank" rel="noopener noreferrer sponsored">Shop on ${safeText(platform)} ↗</a>`
   : "";
     return `<article class="product-card">
-      <div class="product-image">${image}<span class="product-tag">${safeText(p.tag || p.category)}</span></div>
+      <div class="product-image">
+  ${url ? `<a href="${safeText(url)}" target="_blank" rel="noopener noreferrer sponsored">${image}</a>` : image}
+  <span class="product-tag">${safeText(p.tag || p.category)}</span></div>
       <div class="product-info"><p class="product-category">${safeText(p.category)}</p>
       <h3 class="product-name">${safeText(p.name)}</h3>
       <p class="product-description">${safeText(p.description)}</p>
