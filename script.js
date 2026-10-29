@@ -77,9 +77,8 @@ function renderProducts() {
     );
   }
 
-  itemCount.textContent =
-    `${visible.length} ${visible.length === 1 ? "item" : "items"}`;
-
+ itemCount.textContent =
+  visible.length + " " + (visible.length === 1 ? "item" : "items");
   emptyState.textContent = showFavoritesOnly
     ? "No favorites yet. Tap the heart on a product to save it here."
     : "No products match your search. Try another keyword or category.";
