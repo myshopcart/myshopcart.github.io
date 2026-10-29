@@ -679,7 +679,76 @@ footer > a:hover {
   font-size: 10px;
   font-weight: 600;
 }
+/* SORTING DROPDOWN */
 
+.shop-heading-tools {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.sort-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.sort-wrap::after {
+  content: "";
+  position: absolute;
+  top: 45%;
+  right: 15px;
+  width: 7px;
+  height: 7px;
+  border-right: 1.5px solid var(--navy);
+  border-bottom: 1.5px solid var(--navy);
+  transform: translateY(-50%) rotate(45deg);
+  pointer-events: none;
+}
+
+#sortSelect {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 175px;
+  max-width: 100%;
+  padding: 11px 38px 11px 14px;
+
+  border: 1px solid var(--line);
+  border-radius: 999px;
+
+  background: var(--paper);
+  color: var(--navy);
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+#sortSelect:hover {
+  border-color: var(--blue-mid);
+  background: var(--blue-light);
+}
+
+#sortSelect:focus-visible {
+  border-color: #9bb0d3;
+  box-shadow: 0 0 0 4px rgba(155, 176, 211, 0.15);
+}
+
+#sortSelect option {
+  background: var(--paper);
+  color: var(--navy);
+  font-family: var(--sans);
+  font-size: 12px;
+}
 .shop-tools {
   display: flex;
   align-items: center;
@@ -1412,7 +1481,16 @@ footer {
     padding: 6px 9px;
     font-size: 9px;
   }
+  .shop-heading-tools {
+    justify-content: flex-end;
+    gap: 8px;
+  }
 
+  #sortSelect {
+    width: 155px;
+    padding: 10px 32px 10px 12px;
+    font-size: 10px;
+  }
   .shop-tools {
     gap: 13px;
     margin-bottom: 21px;
